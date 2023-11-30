@@ -22,3 +22,5 @@ api/src/lib/generateGraphiQLHeader.*
 !.yarn/versions
 
 !node_modules/@redwoodjs/cli
+
+.clinic
