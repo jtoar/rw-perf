@@ -20,7 +20,3 @@ api/src/lib/generateGraphiQLHeader.*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-
-!node_modules/@redwoodjs/cli
-
-.clinic
