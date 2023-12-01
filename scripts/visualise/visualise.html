@@ -18,49 +18,36 @@
 
         <hr>
 
-        <p>Chart (Total):</p>
-        <div class="max-h-[80vh] -mt-4 flex flex-row gap-4">
-            <!-- chart -->
-            <div class="flex-grow">
-                <canvas id="chart-total"></canvas>
-            </div>
-            <div class="min-w-[20%]">
-                <table class="w-full">
-                    <tr>
-                        <th class="text-left">Measurement</th>
-                        <th class="text-right">Value</th>
-                    </tr>
-                    <tr>
-                        <td>Data points</td>
-                        <td id="total-count" class="text-right">x</td>
-                    </tr>
-                    <tr>
-                        <td>Max</td>
-                        <td id="total-max" class="text-right">x</td>
-                    </tr>
-                    <tr>
-                        <td>Mean</td>
-                        <td id="total-mean" class="text-right">x</td>
-                    </tr>
-                    <tr>
-                        <td>Median</td>
-                        <td id="total-median" class="text-right">x</td>
-                    </tr>
-                </table>
-            </div>
+        <div class="flex flex-row gap-4 justify-center" id="stats">
         </div>
 
         <hr>
 
-        <p>Chart (Processes):</p>
-        <div class="max-h-[80vh] -mt-4">
+        <div class="-mt-4 max-h-[75vh] p-4">
+            <p>Chart (Totals):</p>
+            <!-- chart -->
+            <canvas id="chart-total"></canvas>
+        </div>
+
+        <hr>
+
+        <div class="-mt-4 max-h-[75vh] p-4">
+            <p>Chart (Individuals - Binned):</p>
+            <!-- chart -->
+            <canvas id="chart-indi-binned"></canvas>
+        </div>
+
+        <hr>
+
+        <div class="-mt-4 max-h-[75vh] p-4">
+            <p>Chart (Individuals):</p>
             <!-- chart -->
             <canvas id="chart-indi"></canvas>
         </div>
 
         <hr>
 
-        <p>PID Details:</p>
+        <p>PIDs:</p>
         <div class="-mt-4 max-w-full flex flex-col gap-2 overflow-x-scroll" id="pid-details">
         </div>
 
