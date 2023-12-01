@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Out</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="m-4 font-mono">
+    <div class="flex flex-col gap-4">
+
+        <h1 class="text-3xl font-bold">
+            Process memory monitoring output
+        </h1>
+
+        <hr>
+
+        <p>Chart:</p>
+        <div class="max-h-[80vh] -mt-4">
+            <!-- chart -->
+            <canvas id="chart"></canvas>
+        </div>
+
+        <hr>
+
+        <p>Data:</p>
+        <pre id="neat-data" class="-mt-4">
+            <!-- neat data -->
+        </pre>
+
+        <hr>
+
+        <p>Raw Data:</p>
+        <pre id="raw-data" class="-mt-4">
+            <!-- raw data -->
+        </pre>
+
+    </div>
+    <script src="out-data.js"></script>
+    <script src="out.js"></script>
+</body>
+
+</html>
