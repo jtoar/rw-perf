@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Out</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="m-4 font-mono">
+    <div class="flex flex-col gap-4">
+
+        <h1 class="text-3xl font-bold">
+            Process memory visualiser
+        </h1>
+
+        <hr>
+
+        <p>Chart (Total):</p>
+        <div class="max-h-[80vh] -mt-4 flex flex-row gap-4">
+            <!-- chart -->
+            <div class="flex-grow">
+                <canvas id="chart-total"></canvas>
+            </div>
+            <div class="min-w-[20%]">
+                <table class="w-full">
+                    <tr>
+                        <th class="text-left">Measurement</th>
+                        <th class="text-right">Value</th>
+                    </tr>
+                    <tr>
+                        <td>Data points</td>
+                        <td id="total-count" class="text-right">x</td>
+                    </tr>
+                    <tr>
+                        <td>Max</td>
+                        <td id="total-max" class="text-right">x</td>
+                    </tr>
+                    <tr>
+                        <td>Mean</td>
+                        <td id="total-mean" class="text-right">x</td>
+                    </tr>
+                    <tr>
+                        <td>Median</td>
+                        <td id="total-median" class="text-right">x</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <p>Chart (Processes):</p>
+        <div class="max-h-[80vh] -mt-4">
+            <!-- chart-total -->
+            <canvas id="chart"></canvas>
+        </div>
+
+        <hr>
+
+        <p>Raw Data:</p>
+        <pre id="raw-data" class="-mt-4">
+            <!-- raw data -->
+        </pre>
+
+    </div>
+    <script src="visualise-data.js"></script>
+    <script src="visualise.js"></script>
+</body>
+
+</html>

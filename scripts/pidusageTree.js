@@ -42,6 +42,7 @@ async function main() {
     ].join('\n')}`)
 
     fs.writeFileSync('pidusageTreeData.json', JSON.stringify(data, null, 2))
+    fs.writeFileSync(path.join('visualise', 'visualise-data.js'), `const rawDataJSON = \`${JSON.stringify(data, null, 2)}\`;`)
   })
 }
 
