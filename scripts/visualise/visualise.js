@@ -225,6 +225,10 @@ async function main(divisionCount = 16) {
     })
   }
 
+  const footer = (tooltipItems) => {
+    return "\n---\n" + atob(rawArgs[tooltipItems[0].dataset.label]).split(" ").join('\n');
+  };
+
   const ctxIndiBinned = document.getElementById('chart-indi-binned');
   new Chart(ctxIndiBinned, {
     type: 'line',
@@ -239,6 +243,11 @@ async function main(divisionCount = 16) {
           display: true,
           position: 'right',
         },
+        tooltip: {
+          callbacks: {
+            footer: footer,
+          }
+        }
       },
       spanGaps: true,
       scales: {
@@ -262,4 +271,4 @@ async function main(divisionCount = 16) {
 
 }
 
-main()
+main(32)
