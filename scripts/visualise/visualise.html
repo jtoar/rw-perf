@@ -2,64 +2,55 @@
 <html>
 
 <head>
-    <title>Process memory visualiser</title>
+    <title>Memory Tracker</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="m-4 font-mono max-w-full">
+<body class="m-4 font-mono max-w-full text-sm">
     <div class="flex flex-col gap-4">
 
         <h1 class="text-3xl font-bold">
-            Process memory visualiser
+            Memory Tracker
         </h1>
 
         <hr>
-
-        <div class="flex flex-row gap-4 justify-center" id="stats">
+        <div id="run-config" class="flex flex-col overflow-x-scroll whitespace-nowrap">
+            <!-- Run config -->
         </div>
 
         <hr>
+        <div id="run-kpis" class="flex flex-col overflow-x-scroll whitespace-nowrap">
+            <!-- Run kpis -->
+        </div>
 
+        <hr>
+        <div id="pid-details" class="flex flex-col overflow-x-scroll whitespace-nowrap">
+            <!-- PID Details -->
+        </div>
+
+        <hr>
         <div class="-mt-4 max-h-[75vh] p-4">
-            <p>Chart (Totals):</p>
-            <!-- chart -->
-            <canvas id="chart-total"></canvas>
+            <p>Chart (Total on grid):</p>
+            <canvas id="chart-grid-total"></canvas>
         </div>
 
         <hr>
-
         <div class="-mt-4 max-h-[75vh] p-4">
-            <p>Chart (Individuals - Binned):</p>
-            <!-- chart -->
-            <canvas id="chart-indi-binned"></canvas>
+            <p>Chart (Individual on grid):</p>
+            <canvas id="chart-grid-individual"></canvas>
         </div>
 
         <hr>
-
         <div class="-mt-4 max-h-[75vh] p-4">
-            <p>Chart (Individuals):</p>
-            <!-- chart -->
-            <canvas id="chart-indi"></canvas>
+            <p>Chart (Individual off grid):</p>
+            <canvas id="chart-individual"></canvas>
         </div>
-
-        <hr>
-
-        <p>PIDs:</p>
-        <div class="-mt-4 max-w-full flex flex-col gap-2 overflow-x-scroll" id="pid-details">
-        </div>
-
-        <hr>
-
-        <p>Raw Data:</p>
-        <pre id="raw-data" class="-mt-4 max-h-[50vh] overflow-scroll">
-            <!-- raw data -->
-        </pre>
 
     </div>
-    <script src="visualise-data.js"></script>
+    <script src="visualiseData.js"></script>
     <script src="visualise.js"></script>
 </body>
 
