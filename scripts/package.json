@@ -2,6 +2,8 @@
   "name": "scripts",
   "packageManager": "yarn@4.0.2",
   "dependencies": {
+    "pidtree": "^0.6.0",
+    "pidusage": "^3.0.2",
     "pidusage-tree": "^2.0.5"
   }
 }
